@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>22nd Marriage Anniversary</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='styles.css')}}">
+</head>
+<body>
+    <header>
+        <h1>Happy 22nd Anniversary Mummy and Papa!</h1>
+    </header>
+    <section class="intro">
+        <p>Celebrating 22 wonderful years of love and togetherness. Cheers to many more!</p>
+    </section>
+    <section class="gallery">
+        <h2>Memorable Moments</h2>
+        <div class="gallery-container">
+            <div class="gallery-item"><img src="image1.jpg" alt="Memory 1"></div>
+            <div class="gallery-item"><img src="image2.jpg" alt="Memory 2"></div>
+            <div class="gallery-item"><img src="image3.jpg" alt="Memory 3"></div>
+        </div>
+    </section>
+    <section class="wishes">
+        <h2>Leave Your Wishes</h2>
+        <form id="wish-form">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <textarea id="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+        <div class="wish-messages" id="wish-messages"></div>
+    </section>
+    <footer>
+        <p>&copy; 2024 Celebrating Mummy and Papa's Love</p>
+    </footer>
+    <script src="{{url_for('static',filename='script.js')}}"></script>
+</body>
+</html>
