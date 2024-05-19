@@ -22,7 +22,7 @@ header h1 {
 
 .intro {
     padding: 20px;
-    animation: slideIn 1s ease-in-out;
+    animation: fadeIn 1s ease-in-out;
 }
 
 .gallery {
@@ -56,7 +56,7 @@ header h1 {
 }
 
 .wishes {
-    padding: 20px;
+    padding: 2.5%;
     background: #fff8e1;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin: 20px 0;
@@ -70,22 +70,24 @@ header h1 {
 }
 
 #wish-form input, #wish-form textarea {
-    width: 80%;
-    max-width: 600px;
-    padding: 10px;
+    width: 100%;
+    max-width: 40%;
+    padding: 1% 1%;
     margin: 10px 0;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
 
 #wish-form button {
-    padding: 10px 20px;
+    padding: 1% 1.5%;
+    margin-bottom: 5%;
+    margin-top: 1%;
     background: #ff6f61;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 5px; 
     cursor: pointer;
-    transition: background 0.3s ease;
+    transition: 0.3s ease;
 }
 
 #wish-form button:hover {
@@ -124,7 +126,6 @@ header h1 {
 }
 
 footer {
-    padding: 10px;
     background: #333;
     color: white;
     position: fixed;
@@ -150,4 +151,38 @@ footer {
         transform: translateY(0);
         opacity: 1;
     }
+}
+
+.discussion {
+	max-width: 80%;
+	margin: 0 auto;
+	display: flex;
+	flex-flow: column wrap;
+}
+
+.discussion > .bubble {
+	border-radius: 1em;
+	padding: 0.50em 0.75em;
+	margin: 0.5em;
+	max-width: 100%;
+}
+
+.discussion > .bubble.sender {
+	align-self:flex-start;
+	background-color: pink;
+	color: #fff;
+}
+
+img {
+  width: 500px;
+  height: 500px;
+  object-fit: cover;
+}
+
+/* wraps around all the images */
+.image-container {
+  display: flex;
+  /* move along X-axes */
+  transform: translateX(0);
+  transition: transform 0.5s ease-in-out;
 }
