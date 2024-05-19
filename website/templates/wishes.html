@@ -14,17 +14,8 @@
     <section class="all-wishes">
         <h2 class="text-center">All Wishes</h2>
         <section class="discussion" style="left: 0%;">
-	
-            <div class="bubble sender">Hello</div>
-            <div class="bubble sender">This is a CSS demo of the Messenger chat bubbles, that merge when stacked together.</div>
-            
-            <div class="bubble sender">No, that's full CSS3!</div>
-            <div class="bubble sender">(Take a look to the 'JS' section of this Pen... it's empty! 😃</div>
-            <div class="bubble sender">And it's also really lightweight!</div>
-            <div class="bubble sender">Yeah, but I still didn't succeed to get rid of these stupid  and  classes.</div>
-            <div class="bubble sender">The only solution I see is using JS, or a &lt;div&gt; to group elements together, but I don't want to ...</div>
-            <div class="bubble sender">I think it's more transparent and easier to group .bubble elements in the same parent.</div>
             {% for wish in wishes %}
+            <a href="{{url_for('delete_wish',name=wish[0],wish_text=wish[1],id=wish[2])}}"><img src="{{url_for('static',filename="delete.png")}}" alt="delete" style="display: inline; width: 2%; height: 2%;"></a>
             <div class="bubble sender">
                 {{wish[1]}}<br>
                 <em>~{{wish[0]}}</em>
@@ -43,6 +34,7 @@
         <p>&copy; 2024 Celebrating Mummy and Papa's Love</p>
     </footer>
     <script src="{{url_for('static',filename='script.js')}}"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 </body>
 </html>
