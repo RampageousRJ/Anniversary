@@ -18,7 +18,7 @@
             <a href="{{url_for('delete_wish',name=wish[0],wish_text=wish[1],id=wish[2])}}"><img src="{{url_for('static',filename="delete.png")}}" alt="delete" style="display: inline; width: 2%; height: 2%;"></a>
             <div class="bubble sender">
                 {{wish[1]}}<br>
-                <em>~{{wish[0]}}</em>
+                <em>~ {{wish[0]}}</em>
             </div>
             {% endfor %}
             

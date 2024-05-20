@@ -179,10 +179,8 @@ img {
   object-fit: cover;
 }
 
-/* wraps around all the images */
 .image-container {
   display: flex;
-  /* move along X-axes */
   transform: translateX(0);
   transition: transform 0.5s ease-in-out;
 }
